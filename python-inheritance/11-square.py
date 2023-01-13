@@ -1,27 +1,23 @@
 #!/usr/bin/python3
-"""Square inherits from Rectangle which inherits from BaseGeometry
-"""
+"""This modle creates a class named Square"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square data that inherits from Rectangle
-       init `size` twice because width and height are same in squares
+    """A class named Square
+
+    Attributes:
+    attr1(size): size of square
+    attr2(area): finds the area of it
     """
-
     def __init__(self, size):
-        super().integer_validator("size", size)
-        super().__init__(size, size)
+        """Initializes an instance"""
+        self.integer_validator("size", size)
         self.__size = size
-
-    def area(self):
-        """Method to calculate area of the square
-        """
-
-        return self.__size * self.__size
+        super().__init__(size, size)
 
     def __str__(self):
-        """Magic method to print square description
-        """
-
+        """Returns informal string representation"""
         return "[Square] {}/{}".format(self.__size, self.__size)
