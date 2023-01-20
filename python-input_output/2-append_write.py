@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""write a file"""
+"""append"""
 
 
-def append_file(filename="", text=""):
-    """write"""
-    if filename:
-        with open(filename, mode='a', encoding="utf-8") as f:
-            return (f.write(text))
+def append_write(filename="", text=""):
+    """files"""
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
