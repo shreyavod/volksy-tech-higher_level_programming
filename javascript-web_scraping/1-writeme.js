@@ -1,7 +1,11 @@
 #!/usr/bin/node
-module.exports = {
-  Rectangle: function (w, h) {
-    this.width = w;
-    this.height = h;
+// script that writes a string to a file
+
+const str = process.argv[3];
+const filepath = process.argv[2];
+const fileStream = require('fs');
+fileStream.writeFile(filepath, str, 'utf-8', (error) => {
+  if (error) {
+    console.log(error);
   }
-};
+});
